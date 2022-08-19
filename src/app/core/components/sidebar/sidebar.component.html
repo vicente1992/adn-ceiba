@@ -1,0 +1,34 @@
+<div class="sidebar-gap">
+  <div class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="sidebar-item d-flex justify-content-center">
+        <div class="sidebar-bell">
+          <span class="path">Prestamos Ceiba</span>
+          <em class="uil uil-cloud-database-tree d-lg-none"></em>
+        </div>
+      </li>
+      <li class="sidebar-item">
+        <div class="sidebar-separator"></div>
+      </li>
+      <li class="sidebar-item" *ngFor="let item of items" [routerLink]="item.path" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }" [id]="item.id">
+        <em [class]="item.icon" class="icon-white"></em>
+        <span class="mx-3 path">{{item.name}} </span>
+      </li>
+
+    </ul>
+    <ul class="sidebar-item sidebar-menu">
+      <li class="sidebar-footer">
+        <div class="sidebar-separator"></div>
+      </li>
+
+      <li class="sidebar-item">
+        <a class="sidebar-button" (click)="logout()">
+          <span class="mx-3 path">Loguot</span>
+          <em class="uil uil-signout"></em>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>

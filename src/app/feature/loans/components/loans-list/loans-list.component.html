@@ -1,0 +1,49 @@
+<div class="card loans my-3" *ngFor="let item of loans">
+  <div class="card-body item shadow-sm ">
+    <div class="parent">
+      <div class="info">
+        <span class="title">Nombre</span>
+        <span>{{item.name}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Fecha inicial</span>
+        <span>{{item.startDate}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Fecha final</span>
+        <span>{{item.endDate}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Monto prestado</span>
+        <span>{{item.amount | currency: 'COP'}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Número de cuotas</span>
+        <span>{{item.quotaNumber}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Tasa de interes</span>
+        <span>{{item.interests}} %</span>
+      </div>
+      <div class="info">
+        <span class="title">Monto total</span>
+        <span>{{item.TotalToPay | currency: 'COP'}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Saldo</span>
+        <span>{{item.balance | currency: 'COP'}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Acciones</span>
+        <div>
+          <a class="btn btn-success btn-sm mx-2" [routerLink]="['/', 'loans', 'pay', item.id]" id="linkcreatePay">
+            <em class="uil uil-bill"></em>
+          </a>
+          <button type="button" id="btnDeleteLoan" class="btn btn-danger btn-sm" (click)="deleteLoan(item)">
+            <em class="uil uil-trash-alt"></em>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

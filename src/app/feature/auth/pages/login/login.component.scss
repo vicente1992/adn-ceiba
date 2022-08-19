@@ -1,0 +1,26 @@
+.wrapper-login {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-box {
+    max-width: 500px;
+  }
+
+}
+
+@media screen and (max-width: 955px) {
+  .login-box {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-box {
+    width: 350px;
+  }
+}

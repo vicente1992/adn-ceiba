@@ -1,0 +1,13 @@
+.wrapper-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+
+  .card {
+    border: none !important;
+    max-width: 1000px;
+
+  }
+
+}

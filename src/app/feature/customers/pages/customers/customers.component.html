@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div class="row mb-4">
+    <div class="col-12 wrapper-info">
+      <h6 class="title">Clientes</h6>
+      <a class="btn btn-primary" [routerLink]="['/', 'customers', 'create']" tooltip="Agregar cliente" placement="top"
+        id="linkcreateCustomer">
+        <em class="uil uil-plus"></em>
+      </a>
+    </div>
+  </div>
+  <app-customer-list *ngIf="!!(customers$ | async)" [customers]="customers$ | async"
+    (cbgetCustomer)="getAllCustomers()">
+  </app-customer-list>
+</div>

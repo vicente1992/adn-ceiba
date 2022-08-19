@@ -1,0 +1,35 @@
+<div class="wrapper-container">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1>Pago de prestamo</h1>
+      <form class="row g-3" [formGroup]="payForm" (ngSubmit)="createPay()">
+        <div class="col-md-6">
+          <label for="amountId" class="form-label">Cliente</label>
+          <input type="text" id="idNamePay" class="form-control" formControlName="name" readonly>
+        </div>
+        <div class="col-md-6">
+          <label for="amountId" class="form-label">Monto prestado</label>
+          <input type="number" id="idAmountPay" class="form-control" formControlName="amount" readonly>
+        </div>
+        <div class="col-md-6">
+          <label for="amountId" class="form-label">Tasa de interes (%)</label>
+          <input type="number" id="idInterestsPay" class="form-control" formControlName="interests" readonly>
+        </div>
+        <div class="col-md-6">
+          <label for="amountId" class="form-label">Número de cuotas</label>
+          <input type="number" id="idQuotaNumberPay" placeholder="Número de cuotas" class="form-control"
+            formControlName="quotaNumber" readonly>
+        </div>
+        <div class="col-md-6">
+          <label for="amountId" class="form-label">Valor d cuota</label>
+          <input type="number" id="idAmountQuotaPay" class="form-control" formControlName="amountQuota">
+        </div>
+        <div class="col-md-6"></div>
+        <div class="d-grid gap-1 col-6 mx-auto my-4">
+          <button type="submit" id="createPayBtn" class="btn btn-primary" [disabled]="payForm.invalid">Guardar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

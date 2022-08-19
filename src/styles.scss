@@ -1,0 +1,26 @@
+@import "assets/scss/modules/var";
+@import "assets/scss/modules/mixins";
+@import "assets/scss/modules/utility";
+
+// Partials
+@import "assets/scss/partials/reset";
+@import "assets/scss/partials/grids";
+@import "assets/scss/partials/global";
+@import "assets/scss/partials/buttons";
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+@import '~ngx-toastr/toastr';
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgba(244, 247, 255, 255);
+}
+
+.btn-primary {
+  background-color: #2179ab !important;
+  border: #2179ab;
+}

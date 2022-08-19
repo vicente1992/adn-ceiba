@@ -1,0 +1,36 @@
+<!-- customers -->
+
+<div class="card my-3 customers-list" *ngFor="let item of customers">
+  <div class="card-body item shadow-sm ">
+    <div class="parent">
+      <div class="info">
+        <span class="title">Nombre</span>
+        <span>{{item.name}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Documento</span>
+        <span>{{item.documentNumber}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Télefono</span>
+        <span>{{item.phone}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Dirección</span>
+        <span>{{item.address}}</span>
+      </div>
+      <div class="info">
+        <span class="title">Acciones</span>
+        <div>
+          <a class="btn btn-success btn-sm mx-2" id="linkUpdateCustomer"
+            [routerLink]="['/customers', 'update', item.id]">
+            <em class="uil uil-pen"></em>
+          </a>
+          <button type="button" id="btnDeleteCustomer" class="btn btn-danger btn-sm" (click)="deleteCustomer(item)">
+            <em class="uil uil-trash-alt"></em>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

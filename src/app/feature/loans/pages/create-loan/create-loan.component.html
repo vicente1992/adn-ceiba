@@ -1,0 +1,48 @@
+<div class="wrapper-container">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1>Registrar prestamos</h1>
+      <div class="row">
+        <form class="row g-3" [formGroup]="loanForm" (ngSubmit)="createLoan()" id="formPay">
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Cliente</label>
+            <select class="form-select" id="idName" formControlName="name" [class.is-invalid]="isInvalid('name')">
+              <option [value]="item.name" *ngFor="let item of customers$ |async">{{item.name}} </option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Monto a prestar</label>
+            <input type="number" id="idAmount" class="form-control" formControlName="amount"
+              [class.is-invalid]="isInvalid('amount')">
+          </div>
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Tasa de interes (%)</label>
+            <input type="number" id="idInterests" class="form-control" formControlName="interests"
+              [class.is-invalid]="isInvalid('interests')">
+          </div>
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Número de cuotas</label>
+            <input type="number" id="idQuotaNumber" class="form-control" formControlName="quotaNumber"
+              [class.is-invalid]="isInvalid('quotaNumber')">
+          </div>
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Fecha de inicio</label>
+            <input #date type="date" id="idStartDate" class="form-control" formControlName="startDate"
+              (change)="selectDate(date.value)" [class.is-invalid]="isInvalid('startDate')">
+          </div>
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Fecha final</label>
+            <input type="date" id="idEndDate" class="form-control" formControlName="endDate"
+              [class.is-invalid]="isInvalid('endDate')">
+          </div>
+          <div class="d-grid gap-1 col-6 mx-auto my-4">
+            <button type="submit" id="createLoanBtn" class="btn btn-primary"
+              [disabled]="loanForm.invalid">Guardar</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

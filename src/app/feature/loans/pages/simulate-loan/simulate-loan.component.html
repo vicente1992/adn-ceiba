@@ -1,0 +1,40 @@
+<div class="wrapper-container">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1 class="title">Simula te prestamo</h1>
+      <div class="row">
+        <form class="row g-3" [formGroup]="simulateForm" (ngSubmit)="onSubmit()">
+          <div class="col-md-6">
+            <label for="amountId" class="form-label">Monto a prestar</label>
+            <input type="number" class="form-control" formControlName="amount" id="idAmountSimlate"
+              [class.is-invalid]="isInvalid('amount')">
+          </div>
+          <div class="col-md-6">
+            <label for="quotaId" class="form-label">Número de cuotas</label>
+            <input type="number" class="form-control" id="idQuotaNumberSimulate" formControlName="quotaNumber"
+              [class.is-invalid]="isInvalid('quotaNumber')">
+          </div>
+          <div class="col-md-6">
+            <label for="interestsId" class="form-label">Tasa de interes (%)</label>
+            <input type="number" class="form-control" id="idInterestsSimulate" formControlName="interests"
+              [class.is-invalid]="isInvalid('interests')">
+          </div>
+          <div class="col-md-6">
+            <label for="startDateId" class="form-label">Fecha de inicio</label>
+            <input type="date" class="form-control" id="idStartDateSimulat" formControlName="startDate"
+              [class.is-invalid]="isInvalid('startDate')">
+          </div>
+          <div class="d-grid gap-1 col-6 mx-auto my-4">
+            <button id="createSimulateBtn" type="submit" class="btn btn-primary btn-block"
+              [disabled]="simulateForm.invalid">Simular</button>
+          </div>
+        </form>
+        <div class="d-grid gap-1 col-sm-12 col-md-6 mx-auto">
+
+          <app-loan-information [simulateLoan]="simulateLoan"></app-loan-information>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

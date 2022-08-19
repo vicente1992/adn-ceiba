@@ -1,0 +1,63 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "email": "manuel.ortiz@ceiba.com.co",
+      "password": "123456"
+    },
+    {
+      "id": 1,
+      "email": "manuel@ceiba.com.co",
+      "password": "123456"
+    }
+  ],
+  "customers": [
+    {
+      "name": "Manuel Ortiz!!!!",
+      "documentNumber": "3333",
+      "phone": "43333",
+      "address": "Cartagena",
+      "id": 2
+    }
+  ],
+  "loans": [
+    {
+      "name": "Manuel Ortiz",
+      "amount": 1000000,
+      "interests": 10,
+      "quotaNumber": 10,
+      "startDate": "2022-08-08",
+      "endDate": "2023-06-08",
+      "TotalToPay": 1100000,
+      "balance": 660000,
+      "amountQuota": 110000,
+      "id": 2,
+      "totalPaid": 330000
+    },
+    {
+      "name": "Manuel Ortiz!!!!",
+      "amount": 100000,
+      "interests": 10,
+      "quotaNumber": 12,
+      "startDate": "2022-03-24",
+      "endDate": "2023-03-30",
+      "TotalToPay": 110000,
+      "balance": 91666.66666666666,
+      "amountQuota": 9166.666666666666,
+      "id": 3,
+      "totalPaid": 9166.666666666666
+    },
+    {
+      "name": "Manuel Ortiz!!!!",
+      "amount": 100000,
+      "interests": 10,
+      "quotaNumber": 12,
+      "startDate": "2022-03-24",
+      "endDate": "2023-03-30",
+      "TotalToPay": 110000,
+      "balance": 110000,
+      "amountQuota": 9166.666666666666,
+      "id": 4
+    }
+  ]
+}

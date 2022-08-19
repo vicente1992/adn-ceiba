@@ -1,0 +1,27 @@
+<div class="card shadow-sm" *ngIf="simulateLoan">
+  <div class="card-body">
+    <div class="d-grid gap-2">
+      <span class="text-center title">Valor total a pagar</span>
+      <span class="text-center Total-pay"> {{simulateLoan.amountTotal | currency: 'COP'}}</span>
+    </div>
+    <div class="row row-cols-auto mx-auto mt-3 ">
+      <div class="col-3 d-grid">
+        <span>Monto</span>
+        <span>{{simulateLoan.amount | currency: 'COP'}}</span>
+      </div>
+      <div class="col-3 d-grid">
+        <span>Número cuota</span>
+        <span>{{simulateLoan.quotaNumber}}</span>
+      </div>
+      <div class="col-3 d-grid">
+        <span>Cuota</span>
+        <span>{{simulateLoan.amountQuota | currency: 'COP'}}</span>
+      </div>
+      <div class="col-3 d-grid">
+        <span>Fecha final</span>
+        <span>{{simulateLoan.endDate }}</span>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="main-container">
+  <div class="row">
+    <div class="col-12 wrapper-info">
+      <h6 class="title">Prestamos</h6>
+      <a class="btn btn-primary" id="linkcreateLoan" [routerLink]="['/', 'loans', 'create']">
+        <em class="uil uil-plus"></em>
+      </a>
+    </div>
+  </div>
+  <app-loans-list *ngIf="!!(loans$ |async)" [loans]="loans$ |async" (cbgetLoans)="getAllLoans()"></app-loans-list>
+</div>
